@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TileSet-export_0
+      name: up_left
       rect:
         serializedVersion: 2
         x: 0
@@ -105,7 +105,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -118,15 +118,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_1
+      name: up_middle
       rect:
         serializedVersion: 2
         x: 96
         y: 288
-        width: 96.6
+        width: 97
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -139,7 +139,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_2
+      name: up_right
       rect:
         serializedVersion: 2
         x: 192
@@ -147,7 +147,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -160,7 +160,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_3
+      name: up_vertical
       rect:
         serializedVersion: 2
         x: 288
@@ -168,7 +168,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,7 +189,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,7 +202,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_5
+      name: middle_left
       rect:
         serializedVersion: 2
         x: 0
@@ -210,7 +210,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,7 +223,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_6
+      name: center
       rect:
         serializedVersion: 2
         x: 96
@@ -231,7 +231,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,7 +244,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_7
+      name: middle_right
       rect:
         serializedVersion: 2
         x: 192
@@ -252,7 +252,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -265,7 +265,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_8
+      name: middle_vertical
       rect:
         serializedVersion: 2
         x: 288
@@ -273,7 +273,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -286,7 +286,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_9
+      name: bottom_left
       rect:
         serializedVersion: 2
         x: 0
@@ -294,7 +294,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -307,7 +307,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_10
+      name: bottom_middle
       rect:
         serializedVersion: 2
         x: 96
@@ -315,7 +315,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -328,7 +328,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_11
+      name: boottom_right
       rect:
         serializedVersion: 2
         x: 192
@@ -336,7 +336,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -349,7 +349,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_12
+      name: bottom_vertical
       rect:
         serializedVersion: 2
         x: 288
@@ -357,7 +357,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -370,7 +370,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_13
+      name: left_horizontal
       rect:
         serializedVersion: 2
         x: 0
@@ -378,7 +378,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -391,7 +391,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_14
+      name: middle_horizontal
       rect:
         serializedVersion: 2
         x: 96
@@ -399,7 +399,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -412,7 +412,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_15
+      name: right_horizontal
       rect:
         serializedVersion: 2
         x: 192
@@ -420,7 +420,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -433,7 +433,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: TileSet-export_16
+      name: one_tile
       rect:
         serializedVersion: 2
         x: 288
@@ -441,7 +441,7 @@ TextureImporter:
         width: 96.6
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -464,23 +464,23 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      TileSet-export_0: 1646042057
-      TileSet-export_1: 683976615
-      TileSet-export_10: 1226143280
-      TileSet-export_11: 2128036523
-      TileSet-export_12: -294980157
-      TileSet-export_13: 1957913887
-      TileSet-export_14: -1811303868
-      TileSet-export_15: 1176179757
-      TileSet-export_16: 280680125
-      TileSet-export_2: 1571173783
-      TileSet-export_3: 869744561
       TileSet-export_4: 1368466954
-      TileSet-export_5: 669763148
-      TileSet-export_6: -1155895734
-      TileSet-export_7: 602568320
-      TileSet-export_8: -550290572
-      TileSet-export_9: -359546111
+      boottom_right: 2128036523
+      bottom_left: -359546111
+      bottom_middle: 1226143280
+      bottom_vertical: -294980157
+      center: -1155895734
+      left_horizontal: 1957913887
+      middle_horizontal: -1811303868
+      middle_left: 669763148
+      middle_right: 602568320
+      middle_vertical: -550290572
+      one_tile: 280680125
+      right_horizontal: 1176179757
+      up_left: 1646042057
+      up_middle: 683976615
+      up_right: 1571173783
+      up_vertical: 869744561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
