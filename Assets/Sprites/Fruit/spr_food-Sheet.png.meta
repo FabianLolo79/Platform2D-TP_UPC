@@ -71,8 +71,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -111,8 +111,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35127907228d333499241d2c25d9d9f6
-      internalID: -920471110
+      spriteID: 739b58566aa22c145beaccf3d67dc71d
+      internalID: 1457909089
       vertices: []
       indices: 
       edges: []
@@ -132,8 +132,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8197cfc047a31449b7e92d12f1bfa24
-      internalID: 66191886
+      spriteID: 28227579c763ee74c807c2f7d52ef68d
+      internalID: -1035520025
       vertices: []
       indices: 
       edges: []
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_food-Sheet_0: -920471110
-      spr_food-Sheet_1: 66191886
+      spr_food-Sheet_0: 1457909089
+      spr_food-Sheet_1: -1035520025
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

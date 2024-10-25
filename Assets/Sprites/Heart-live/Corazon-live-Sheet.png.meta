@@ -71,8 +71,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,7 +97,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Corazon-live-Sheet_0
+      name: Heart-live-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -105,20 +105,20 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e456997f290105541a8a40e48c219475
-      internalID: -443882887
+      spriteID: a532730752687b7499a6bea4cf323fed
+      internalID: 1158124502
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Corazon-live-Sheet_1
+      name: Heart-live-Sheet_1
       rect:
         serializedVersion: 2
         x: 96
@@ -126,14 +126,14 @@ TextureImporter:
         width: 96
         height: 96
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f3cee2eea4c71f4a812dae9ba027f12
-      internalID: 1853240426
+      spriteID: c465c7bda9f57444cb1330bc4b459721
+      internalID: 1316644414
       vertices: []
       indices: 
       edges: []
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Corazon-live-Sheet_0: -443882887
-      Corazon-live-Sheet_1: 1853240426
+      Heart-live-Sheet_0: 1158124502
+      Heart-live-Sheet_1: 1316644414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
