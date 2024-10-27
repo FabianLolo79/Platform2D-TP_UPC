@@ -24,6 +24,7 @@ public class PlayerRoo : MonoBehaviour
     {
         Move();
         Jump();
+         
     }
 
 
@@ -62,6 +63,12 @@ public class PlayerRoo : MonoBehaviour
         {
             _isGrounded = true;
         }
+
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            TakeDamage();
+            gameObject.SetActive(false);
+        }
     }
 
 
@@ -72,4 +79,21 @@ public class PlayerRoo : MonoBehaviour
         localScaleX = localScaleX * -1f;
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
+
+
+
+    public void TakeDamage()
+    {
+        _lives --;
+        if (_lives < 0)
+        {
+            Die();
+        }
+    }
+
+    public virtual void Die()
+    {
+        Debug.Log($"Character has died");
+    }
 }
+
