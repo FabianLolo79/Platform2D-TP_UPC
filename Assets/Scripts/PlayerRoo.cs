@@ -10,7 +10,7 @@ public class PlayerRoo : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _jumpForce;
     
-    [SerializeField] private  Rigidbody2D _rb;
+    [SerializeField] private  Rigidbody2D _rb; // referencia desde el editor
 
     private Vector2 _movement;
 
@@ -20,7 +20,7 @@ public class PlayerRoo : MonoBehaviour
     //private bool _isAttacking;
     
 
-    private void Update()
+    private void FixedUpdate() // es mejor para las físicas
     {
         Move();
         Jump();
