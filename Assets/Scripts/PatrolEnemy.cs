@@ -9,11 +9,11 @@ public class PatrolEnemy : MonoBehaviour
     [SerializeField] private float _waitTime;
     [SerializeField] private Transform[] _wayPoints;
 
-
-
     private bool _facingRight;
     private int _currentWaypoint;
     private bool _isWaiting;
+
+
 
     // Update is called once per frame
     void FixedUpdate()
