@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 872617209391771234}
   - component: {fileID: 1734530114259240619}
   - component: {fileID: 6252403433143385905}
+  - component: {fileID: 1756206860874730683}
   m_Layer: 0
   m_Name: "Rub\xED"
   m_TagString: Untagged
@@ -143,3 +144,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84b00e14457a43245b8aeee4a9695d0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1756206860874730683
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6299254472374460842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4ce541bd76b92b547967c0426bf7c351, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

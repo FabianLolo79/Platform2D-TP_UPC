@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DeadCollision : MonoBehaviour
 {
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.CompareTag("Player"))
-    //    {
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
 
-    //    }
-    //}
+        }
+    }
 }
