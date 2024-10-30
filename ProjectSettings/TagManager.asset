@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Food
   - Head_Enemy
+  - Heart_life
+  - Sword
   layers:
   - Default
   - TransparentFX

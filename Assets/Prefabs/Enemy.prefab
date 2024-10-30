@@ -649,9 +649,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 3
   _waitTime: 1.5
-  _wayPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  _wayPoints: []
 --- !u!114 &1724332025557738556
 MonoBehaviour:
   m_ObjectHideFlags: 0

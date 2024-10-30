@@ -28,14 +28,6 @@ public class PlayerRoo : MonoBehaviour
     {
         Move();
         Jump();
-
-
-        //if (_hit == true)
-        //{
-        //    _rb.AddForce(Vector2.up * _jumpHitForce, ForceMode2D.Impulse);
-        //    _hit = false;
-        //}
-
     }
 
 
