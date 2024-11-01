@@ -10,6 +10,7 @@ TagManager:
   - Head_Enemy
   - Heart_life
   - Sword
+  - Move_platform
   layers:
   - Default
   - TransparentFX
