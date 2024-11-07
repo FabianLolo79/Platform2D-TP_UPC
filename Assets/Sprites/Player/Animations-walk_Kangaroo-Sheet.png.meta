@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 80e4762cab37fa74cbb01c253c678da1
+guid: d95725c49336a4a498a5c878225b5339
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -71,8 +71,8 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
+    textureFormat: 4
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_player_hit-Sheet_0
+      name: Animations-walk_Kangaroo-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 159
-        height: 135
+        width: 231
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45924a24098238e4db4cab9bae0641cd
-      internalID: -2026303921
+      spriteID: 35030fc0b068f9349a30aff0d34aff58
+      internalID: 1115969372
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_hit-Sheet_1
+      name: Animations-walk_Kangaroo-Sheet_1
       rect:
         serializedVersion: 2
-        x: 159
+        x: 231
         y: 0
-        width: 159
-        height: 135
+        width: 231
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,8 +132,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 842eb0875b4099a4e8d5e0bf2df95fe2
-      internalID: 1456742233
+      spriteID: a45a0bb7e20122240bc264046e4dcf25
+      internalID: -428385990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animations-walk_Kangaroo-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 0
+        width: 231
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1dfd4e37c02cf428bc3e9f74ef782e
+      internalID: 2073986531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animations-walk_Kangaroo-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 693
+        y: 0
+        width: 231
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0910780af651ee147af76912141efbf1
+      internalID: -1300028091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animations-walk_Kangaroo-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 0
+        width: 231
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f23e8e16f0f9ce244b801e6a70da1816
+      internalID: -1512321617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Animations-walk_Kangaroo-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 0
+        width: 231
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026a2aee0577c9c49bbaae9d0c127854
+      internalID: 296214197
       vertices: []
       indices: 
       edges: []
@@ -149,8 +233,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      spr_player_hit-Sheet_0: -2026303921
-      spr_player_hit-Sheet_1: 1456742233
+      Animations-walk_Kangaroo-Sheet_0: 1115969372
+      Animations-walk_Kangaroo-Sheet_1: -428385990
+      Animations-walk_Kangaroo-Sheet_2: 2073986531
+      Animations-walk_Kangaroo-Sheet_3: -1300028091
+      Animations-walk_Kangaroo-Sheet_4: -1512321617
+      Animations-walk_Kangaroo-Sheet_5: 296214197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

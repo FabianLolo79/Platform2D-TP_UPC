@@ -5,24 +5,34 @@ using UnityEngine;
 
 public class PlayerRoo : MonoBehaviour
 {
-    //Variables
-    [SerializeField] private int _lives;
+
+    [Header("Movement")] //Variables
+    [SerializeField] private Rigidbody2D _rb; // referencia desde el editor
     [SerializeField] private float _speed;
-    [SerializeField] private float _jumpForce;
-    [SerializeField] private float _rebotingForce;
-    [SerializeField] private float _distanceJumpChecker;
-    [SerializeField] private LayerMask _groudLayerMask;
-    [SerializeField] private  Rigidbody2D _rb; // referencia desde el editor
-    [SerializeField] private GameObject _enemy;
-    
-
-    private Vector2 _movement;
-
-    //Boleans comprobation
-    private bool _isGrounded = false;
+    [Range(0, 0.3f)][SerializeField] private float _moveSmooth;
+    [SerializeField] private float _horizontalInput = 0f;
+    private Vector3 _speedZ  = Vector3.zero;
     private bool _facingRight = true;
+
+    [Header("Jump")]
+    [SerializeField] private float _jumpForce;
+    [SerializeField] private LayerMask _groudLayerMaskQueEsSuelo;
+    //[SerializeField] private Transform _controlGrounded;
+    //[SerializeField] private Vector3 dimensionCaja;
+    //[SerializeField] bool salto = false;
+    //private bool enSuelo;
+         
+    [SerializeField] private float _rebotingForce;
+
+    [SerializeField] private float _distanceJumpChecker;
+    
     private bool _hasToJump;
-    private float _horizontalInput;
+
+    [SerializeField] private int _lives;
+     
+    //[SerializeField] private GameObject _enemy; se usa esto? revisar 07/11/2024
+    [SerializeField] private Animator _animator; // referencia desde el editor
+
     //public bool _hit = false;
     //private bool _isAttacking;
 
@@ -35,18 +45,25 @@ public class PlayerRoo : MonoBehaviour
 
     private void FixedUpdate() // es mejor para las físicas
     {
-        Move();
+        
+        Move(_horizontalInput * Time.deltaTime);
+
     }
 
     private void CheckInputs()
     {
         _hasToJump = Input.GetButtonDown("Jump"); // Input.GetButtonDown("Jump") Input.GetKey(KeyCode.V) 
-        _horizontalInput = Input.GetAxisRaw("Horizontal");
+        _horizontalInput = Input.GetAxisRaw("Horizontal") * _speed;
     }
 
-    private void Move()
+    private void Move(float mover)
     {
-        _rb.velocity = new Vector2(_horizontalInput * _speed, _rb.velocity.y);
+        //_rb.velocity = new Vector2(_horizontalInput , _rb.velocity.y);
+
+        Vector3 velocidadObjetivo = new Vector2(mover, _rb.velocity.y);
+        _rb.velocity = Vector3.SmoothDamp(_rb.velocity, velocidadObjetivo, ref _speedZ, _moveSmooth);
+
+        _animator.SetFloat("Horizontal", Mathf.Abs(_horizontalInput));
 
         //Flip character
         if (_horizontalInput < 0f && _facingRight == true)
@@ -61,10 +78,10 @@ public class PlayerRoo : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            _isGrounded = true;
-        }
+        //if (collision.gameObject.CompareTag("Ground"))
+        //{
+        //    _isGrounded = true;
+        //}
 
         if (collision.gameObject.CompareTag("Head_Enemy"))
         {
@@ -86,17 +103,22 @@ public class PlayerRoo : MonoBehaviour
 
     private void Jump()
     {
+        //salto = true;
+        //enSuelo = Physics2D.OverlapBox(_controlGrounded.position, dimensionCaja, 0f, _groudLayerMaskQueEsSuelo);
         if (_hasToJump) // Input.GetButtonDown("Jump") Input.GetKey(KeyCode.V) 
         {
-            var raycast2d = Physics2D.Raycast(transform.position, Vector2.down, _distanceJumpChecker, _groudLayerMask);
+            _animator.SetBool("Jump", true);
+            var raycast2d = Physics2D.Raycast(transform.position, Vector2.down, _distanceJumpChecker, _groudLayerMaskQueEsSuelo);
+            //_animator.SetFloat("Vertical", Mathf.Abs(transform.position.y, transform.position.x));
 
-            if(raycast2d.collider == null) return;
+            if (raycast2d.collider == null) return;
             //_rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
 
             // prueba con el ejemplo del profe y texto 
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            _isGrounded = false;
+            //_isGrounded = false;
         }
+        _animator.SetBool("Jump", false);
     }
 
     private void Reboting()
@@ -114,7 +136,7 @@ public class PlayerRoo : MonoBehaviour
 
 
 
-    public void TakeDamage()
+    public void TakeDamage()    
     {
         _lives --;
         if (_lives < 0)
