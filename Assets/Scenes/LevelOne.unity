@@ -17802,7 +17802,7 @@ MonoBehaviour:
   _groudLayerMaskQueEsSuelo:
     serializedVersion: 2
     m_Bits: 8
-  _rebotingForce: 4.5
+  _rebotingForce: 5
   _distanceJumpChecker: 1.5
   _lives: 1
   _animator: {fileID: 826388650}
