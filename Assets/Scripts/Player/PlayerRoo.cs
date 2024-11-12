@@ -19,7 +19,7 @@ public class PlayerRoo : MonoBehaviour
     [SerializeField] private LayerMask _groudLayerMaskQueEsSuelo;
     //[SerializeField] private Transform _controlGrounded;
     //[SerializeField] private Vector3 dimensionCaja;
-    //[SerializeField] bool salto = false;
+    
     //private bool enSuelo;
          
     [SerializeField] private float _rebotingForce;
@@ -103,22 +103,24 @@ public class PlayerRoo : MonoBehaviour
 
     private void Jump()
     {
-        //salto = true;
+        
         //enSuelo = Physics2D.OverlapBox(_controlGrounded.position, dimensionCaja, 0f, _groudLayerMaskQueEsSuelo);
         if (_hasToJump) // Input.GetButtonDown("Jump") Input.GetKey(KeyCode.V) 
         {
-            _animator.SetBool("Jump", true);
+            _animator.SetBool("enSuelo", true);
             var raycast2d = Physics2D.Raycast(transform.position, Vector2.down, _distanceJumpChecker, _groudLayerMaskQueEsSuelo);
-            //_animator.SetFloat("Vertical", Mathf.Abs(transform.position.y, transform.position.x));
+
+            _animator.SetBool("enSuelo", true);
 
             if (raycast2d.collider == null) return;
             //_rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
 
             // prueba con el ejemplo del profe y texto 
             _rb.AddForce(Vector2.up * _jumpForce, ForceMode2D.Impulse);
-            //_isGrounded = false;
+            
+            _animator.SetBool("enSuelo", false);
         }
-        _animator.SetBool("Jump", false);
+             
     }
 
     private void Reboting()
