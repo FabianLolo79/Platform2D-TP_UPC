@@ -9,7 +9,10 @@ public class FruitCollected : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            _animator.SetBool("Hit", true);
+            var player = collision.gameObject.GetComponent<PlayerRoo>();
+            player.AddScore();
+
+            //_animator.SetBool("Hit", true);
             gameObject.SetActive(false);
         }
     }

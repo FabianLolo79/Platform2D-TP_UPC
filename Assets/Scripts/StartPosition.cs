@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class StartPosition : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Transform _playerTransform;
+    [SerializeField] private GameObject _player;
+    
+
+    private void Start()
     {
-        
+        Respawner();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Respawner();
+        }
+    }
+
+    private void Respawner()
+    {
+        _player.SetActive(true);
+        _playerTransform.position = transform.position;
+
     }
 }

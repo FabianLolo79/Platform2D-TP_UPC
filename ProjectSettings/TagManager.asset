@@ -11,6 +11,8 @@ TagManager:
   - Heart_life
   - Sword
   - Move_platform
+  - Gema
+  - Rubi
   layers:
   - Default
   - TransparentFX

@@ -28,7 +28,9 @@ public class PlayerRoo : MonoBehaviour
     
     private bool _hasToJump;
 
+    [Header("HUD")]
     [SerializeField] private int _lives;
+    private int _score = 0;
      
     //[SerializeField] private GameObject _enemy; se usa esto? revisar 07/11/2024
     [SerializeField] private Animator _animator; // referencia desde el editor
@@ -152,10 +154,23 @@ public class PlayerRoo : MonoBehaviour
         Debug.Log($"Character has died");
     }
 
-    //TODO 
+    //TODO FALTA
     public void AddScore()
     {
-       Debug.Log($"gane 100 de SCORE");
+        if (gameObject.CompareTag("Food"))
+        {
+            Debug.Log($"gane 100 de SCORE");
+        }
+
+        if (gameObject.CompareTag("Gema"))
+        {
+            Debug.Log($"gane 500 de SCORE");
+        }
+
+        if (gameObject.CompareTag("Rubi"))
+        {
+            Debug.Log($"gane 1000 de SCORE");
+        }
     }
 
     //TODO 
