@@ -1001,8 +1001,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c23b892eb39fe0409079e9fb120f4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _waitTime: 1
+  _speed: 2
+  _waitTime: 0.5
   _wayPoints:
   - {fileID: 1953883893}
   - {fileID: 1519773374}
@@ -2667,8 +2667,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c23b892eb39fe0409079e9fb120f4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _waitTime: 1
+  _speed: 1.5
+  _waitTime: 0.5
   _wayPoints:
   - {fileID: 417620283}
   - {fileID: 83847985}
@@ -3271,7 +3271,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4625719, y: -1.0953395, z: -10}
+  m_LocalPosition: {x: 27.524807, y: 7.348016, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4200,7 +4200,7 @@ Transform:
   m_GameObject: {fileID: 665025537}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: 1.85, z: 0}
+  m_LocalPosition: {x: 31.03, y: 3.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17906,7 +17906,7 @@ Transform:
   m_GameObject: {fileID: 733757978}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.4622233, y: -0.92000026, z: -10}
+  m_LocalPosition: {x: 27.532223, y: 9.13, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18681,7 +18681,7 @@ Transform:
   m_GameObject: {fileID: 826388644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.44, y: -0.92, z: 0}
+  m_LocalPosition: {x: 27.51, y: 9.13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18711,6 +18711,7 @@ MonoBehaviour:
   _rebotingForce: 5
   _distanceJumpChecker: 1.5
   _lives: 1
+  _score: 0
   _animator: {fileID: 826388650}
 --- !u!50 &826388649
 Rigidbody2D:
@@ -20949,8 +20950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c23b892eb39fe0409079e9fb120f4bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _waitTime: 1
+  _speed: 2
+  _waitTime: 0.5
   _wayPoints:
   - {fileID: 154776336}
   - {fileID: 361063063}

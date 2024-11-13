@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7665254881485812063}
   - component: {fileID: -3848793645088594352}
   - component: {fileID: 8066614967754325368}
-  - component: {fileID: 3111304313992917950}
+  - component: {fileID: 648857359395925}
   m_Layer: 0
   m_Name: Gema
   m_TagString: Gema
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.46493053, y: 0.57784176}
   m_EdgeRadius: 0
---- !u!114 &3111304313992917950
+--- !u!114 &648857359395925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,6 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 1255196596321833771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84b00e14457a43245b8aeee4a9695d0e, type: 3}
+  m_Script: {fileID: 11500000, guid: b72c220d6a28463499912cb9b6bd90eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: -3848793645088594352}
+  _points: 500
