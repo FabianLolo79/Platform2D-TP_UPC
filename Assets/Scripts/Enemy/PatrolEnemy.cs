@@ -62,4 +62,24 @@ public class PatrolEnemy : MonoBehaviour
         localScaleX = localScaleX * -1f;
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
+
+    //CODE para que el player se desplaze con la plataforma en horizontal
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(this.transform);
+        }
+    }
+
+    //CODE para que el player se desplaze con la plataforma en horizontal
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
+    }
+
+
 }

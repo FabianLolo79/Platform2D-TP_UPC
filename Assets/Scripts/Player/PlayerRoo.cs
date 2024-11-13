@@ -151,5 +151,24 @@ public class PlayerRoo : MonoBehaviour
     {
         Debug.Log($"Character has died");
     }
+
+    //TODO 
+    public void AddScore()
+    {
+       Debug.Log($"gane 100 de SCORE");
+    }
+
+    //TODO 
+    public void AddLife()
+    {
+        _lives ++;
+        int maxLife = 3;
+        
+
+        if (_lives > maxLife)
+        {
+            _lives = maxLife;
+        }
+    }
 }
 
