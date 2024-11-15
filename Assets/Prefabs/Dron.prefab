@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 7220986380315107695}
   - component: {fileID: 3019395146907017987}
   - component: {fileID: 922534724758537081}
+  - component: {fileID: 5315995292627605523}
   m_Layer: 0
   m_Name: Dron
   m_TagString: Untagged
@@ -375,3 +376,18 @@ CapsuleCollider2D:
   m_Offset: {x: -0.009090424, y: 0.027286984}
   m_Size: {x: 1.7135986, y: 0.7323666}
   m_Direction: 1
+--- !u!114 &5315995292627605523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9127996064979763950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c23b892eb39fe0409079e9fb120f4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _speed: 4
+  _waitTime: 1.5
+  _wayPoints: []
