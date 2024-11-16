@@ -111,7 +111,7 @@ public class PlayerRoo : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             TakeDamage();
-            gameObject.SetActive(false);
+            //gameObject.SetActive(false);
         }
     }
 
@@ -155,9 +155,10 @@ public class PlayerRoo : MonoBehaviour
     public void TakeDamage()
     {
         _lives--;
-        if (_lives < 0)
+        if (_lives == 0)
         {
-            Die();
+            //Die();
+            SceneManager.LoadScene(0);
         }
         UpdateScoreLive();
     }
@@ -179,7 +180,6 @@ public class PlayerRoo : MonoBehaviour
     public virtual void Die()
     {
         Debug.Log($"Character has died");
-        GameOver();
     }
 
     public void UpdateScoreLive()
@@ -200,20 +200,20 @@ public class PlayerRoo : MonoBehaviour
         scoreText.text = $"SCORE: {score}";  // "Score" + _score ;
     }
 
-    public void GameOver()
-    {
-        ResetScore();
-        SceneManager.LoadScene(1);
-    }
+    //public void GameOver()
+    //{
+    //    ResetScore();
+        
+    //}
 
-    public void ResetScore()
-    {
+    //public void ResetScore()
+    //{
 
-        _lives = 1;
-        score = 0;
-        UpdateScoreText();
-        UpdateScoreLive();
-    }
+    //    _lives = 1;
+    //    score = 0;
+    //    UpdateScoreText();
+    //    UpdateScoreLive();
+    //}
 
    
 }
