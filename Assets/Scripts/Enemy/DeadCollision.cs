@@ -8,7 +8,7 @@ public class DeadCollision : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            ;
         }
     }
 }
