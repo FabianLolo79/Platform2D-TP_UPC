@@ -1,18 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class WinGame : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private GameObject _panel;
+    //[SerializeField] private GameObject _playerScore;
+    //public TMP_Text scoreText;
+
+    
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            Win();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Win()
     {
-        
+       // gameObject.SetActive(true);
+       _panel.SetActive(true);
     }
 }

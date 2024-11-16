@@ -1,7 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerRoo : MonoBehaviour
 {
@@ -30,11 +30,14 @@ public class PlayerRoo : MonoBehaviour
 
     [Header("HUD")]
     [SerializeField] private int _lives;
-    [SerializeField] private int _score;
-    
+    public int score;
+    public TMP_Text scoreText;
+    public TMP_Text livesText;
 
-     
+
+
     //[SerializeField] private GameObject _enemy; se usa esto? revisar 07/11/2024
+    [Header("ANIMATOR")]
     [SerializeField] private Animator _animator; // referencia desde el editor
 
     //public bool _hit = false;
@@ -43,14 +46,15 @@ public class PlayerRoo : MonoBehaviour
 
     private void Start()
     {
-        _score = 0;
+        score = 0;
+        UpdateScoreText();
+        UpdateScoreLive();
     }
 
     public void Update()
     {
         CheckInputs();
         Jump();
-
     }
 
     private void FixedUpdate() // es mejor para las físicas
@@ -148,42 +152,69 @@ public class PlayerRoo : MonoBehaviour
 
 
 
-    public void TakeDamage()    
+    public void TakeDamage()
     {
-        _lives --;
+        _lives--;
         if (_lives < 0)
         {
             Die();
         }
-    }
-
-    public virtual void Die()
-    {
-        Debug.Log($"Character has died");
-    }
-
-    //TODO FALTA
-    public void AddScore(int points)
-    {
-        _score += points;
-    }
-
-    public void ResetScore()
-    {
-        _score = 0;
+        UpdateScoreLive();
     }
 
     //TODO 
     public void AddLife()
     {
-        _lives ++;
+        _lives++;
         int maxLife = 3;
-        
+
 
         if (_lives > maxLife)
         {
             _lives = maxLife;
         }
+        UpdateScoreLive();
     }
+
+    public virtual void Die()
+    {
+        Debug.Log($"Character has died");
+        GameOver();
+    }
+
+    public void UpdateScoreLive()
+    {
+        //scoreText.text = $"SCORE: {score}";   "Score" + _score ;
+        livesText.text = $"LIVE: {_lives}";
+    }
+
+    //TODO FALTA
+    public void AddScore(int points)
+    {
+        score += points;
+        UpdateScoreText();
+    }
+
+    public void UpdateScoreText()
+    {
+        scoreText.text = $"SCORE: {score}";  // "Score" + _score ;
+    }
+
+    public void GameOver()
+    {
+        ResetScore();
+        SceneManager.LoadScene(1);
+    }
+
+    public void ResetScore()
+    {
+
+        _lives = 1;
+        score = 0;
+        UpdateScoreText();
+        UpdateScoreLive();
+    }
+
+   
 }
 
