@@ -13,6 +13,7 @@ TagManager:
   - Move_platform
   - Gema
   - Rubi
+  - Foot
   layers:
   - Default
   - TransparentFX

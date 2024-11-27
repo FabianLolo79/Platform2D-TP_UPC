@@ -25,6 +25,5 @@ public class StartPosition : MonoBehaviour
     {
         _player.SetActive(true);
         _playerTransform.position = transform.position;
-
     }
 }
