@@ -6,27 +6,29 @@ using UnityEngine.UI;
 public class PlayerRoo : MonoBehaviour
 {
 
-    [Header("Movement")] //Variables
     [SerializeField] private Rigidbody2D _rb; // referencia desde el editor
+
+    [Header("Movement")] //Variables
+    [SerializeField] private float _horizontalInput = 0f;
     [SerializeField] private float _speed;
     [Range(0, 0.3f)][SerializeField] private float _moveSmooth;
-    [SerializeField] private float _horizontalInput = 0f;
     private Vector3 _speedZ  = Vector3.zero;
     private bool _facingRight = true;
 
     [Header("Jump")]
     [SerializeField] private float _jumpForce;
     [SerializeField] private LayerMask _groudLayerMaskQueEsSuelo;
+    private bool _hasToJump;
+    [SerializeField] private float _distanceJumpChecker;
+    [SerializeField] private bool _enSuelo;
     //[SerializeField] private Transform _controlGrounded;
     //[SerializeField] private Vector3 dimensionCaja;
-    
-    //private bool enSuelo;
-         
-    [SerializeField] private float _rebotingForce;
 
-    [SerializeField] private float _distanceJumpChecker;
+    [Header("Reboting")]
+    [SerializeField] private float _rebotingForce;
     
-    private bool _hasToJump;
+    
+    
 
     [Header("HUD")]
     [SerializeField] private int _lives;
@@ -34,7 +36,8 @@ public class PlayerRoo : MonoBehaviour
     public TMP_Text scoreText;
     public TMP_Text livesText;
 
-
+    [Header("trigger for cam")]
+    public GameObject hitTrigger;
 
     //[SerializeField] private GameObject _enemy; se usa esto? revisar 07/11/2024
     [Header("ANIMATOR")]
@@ -59,9 +62,14 @@ public class PlayerRoo : MonoBehaviour
 
     private void FixedUpdate() // es mejor para las físicas
     {
-        
-        Move(_horizontalInput * Time.deltaTime);
+        //CamControll camController = hitTrigger.GetComponent<CamController>();
 
+        Move(_horizontalInput * Time.deltaTime);
+        //if (camController.stopPlayerMovement == false)
+        //{
+            
+        //}
+        //else return;
     }
 
     private void CheckInputs()
@@ -115,16 +123,16 @@ public class PlayerRoo : MonoBehaviour
         }
     }
 
-    private void Jump()
+    private void Jump() // MEJORANDO POR ACÁ
     {
         
         //enSuelo = Physics2D.OverlapBox(_controlGrounded.position, dimensionCaja, 0f, _groudLayerMaskQueEsSuelo);
         if (_hasToJump) // Input.GetButtonDown("Jump") Input.GetKey(KeyCode.V) 
         {
-            _animator.SetBool("enSuelo", true);
+            //_animator.SetBool("enSuelo", true);
             var raycast2d = Physics2D.Raycast(transform.position, Vector2.down, _distanceJumpChecker, _groudLayerMaskQueEsSuelo);
 
-            _animator.SetBool("enSuelo", true);
+            //_animator.SetBool("enSuelo", true);
 
             if (raycast2d.collider == null) return;
             //_rb.velocity = new Vector2(_rb.velocity.x, _jumpForce);
@@ -185,7 +193,7 @@ public class PlayerRoo : MonoBehaviour
     public void UpdateScoreLive()
     {
         //scoreText.text = $"SCORE: {score}";   "Score" + _score ;
-        livesText.text = $"LIVE: {_lives}";
+        livesText.text = $"x {_lives}";
     }
 
     //TODO FALTA
