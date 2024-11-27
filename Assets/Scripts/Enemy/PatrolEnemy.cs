@@ -78,7 +78,7 @@ public class PatrolEnemy : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             collision.transform.SetParent(null);
-            return;
+            //return;
         }
     }
 
